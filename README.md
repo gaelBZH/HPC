@@ -12,7 +12,8 @@ The main language of this repository is, for now, **C**.
 HPC
 ├───Laboratory1
 ├───Laboratory2
-└───Laboratory3
+├───Laboratory3
+└───Laboratory4
 ```
 This repository only contains **Laboratories** in dedicated folders.
 
