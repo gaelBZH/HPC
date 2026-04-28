@@ -14,7 +14,9 @@ HPC
 ├───Laboratory2
 ├───Laboratory3
 ├───Laboratory4
-└───Laboratory5
+├───Laboratory5
+├───Laboratory6
+└───Laboratory7
 ```
 This repository only contains **Laboratories** in dedicated folders.
 
