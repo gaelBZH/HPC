@@ -1,0 +1,2 @@
+Original code uses Stride-N access, causing constant cache miss and bad performance even with O3 flag optimization
+By swapping loops, mat_vec_1 enables Stride-1 linear access (with vectorization) and efficient cache usage that results in a 15x speedup.
