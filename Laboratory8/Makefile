@@ -3,7 +3,7 @@ LOADER = gcc
 
 #Optimization flags!
 
-OPT = -O0
+OPT = -O3
 
 INC = -I./
 
@@ -26,3 +26,4 @@ tmeas.o: tmeas.c
 clean:
 	rm -f *.o
 	rm -f my_program
+
