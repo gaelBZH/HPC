@@ -52,16 +52,16 @@ int main(void)
 
     start=omp_get_wtime();
 
-    //fragment for paralelization
-    
+   //fragment for paralelization
+    #pragma omp parallel for private(j,k,sum) shared(A, B, C)
     for (i = 0; i < N; i++) 
     {
        for (j = 0; j < N; j++)
        {
-	  sum = 0;
-	  for (k = 0; k < N; k++)
-	  {
-	     sum += A[i][k] * B[k][j];
+          sum = 0;
+          for (k = 0; k < N; k++)
+          {
+             sum += A[i][k] * B[k][j];
           }
           C[i][j] = sum;
        }
@@ -75,3 +75,5 @@ int main(void)
 	printf("Program exited with errors\n");
     return 0;
 }
+
+// OMP_NUM_THREADS=4 ./prog3

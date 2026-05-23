@@ -9,12 +9,32 @@ int main()
 	
    printf("Insert number:\n");
    scanf("%d",&number);
-   //how to parallelize it with good final result?
-   //#pragma omp parallel for 
-   for(i=0;i<N;i++)
+   #pragma omp parallel for reduction(+:square)
+   for(i = 0; i < N; i++)
    {
-	square+=number*number;
+      square += number * number;
    }
+
+   /*
+   // Atomic (fast)
+   #pragma omp parallel for
+   for(i = 0; i < N; i++)
+   {
+      #pragma omp atomic
+      square += number * number;
+   }
+
+   // Critical (slow)
+   #pragma omp parallel for
+   for(i = 0; i < N; i++)
+   {
+      #pragma omp critical
+      {
+         square += number * number;
+      }
+   }
+
+   */
    
    printf("Square=%d\n",square);
 }

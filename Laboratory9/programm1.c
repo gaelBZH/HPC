@@ -59,5 +59,4 @@ int main()
 	}
 	//4. What is the default data scope without any clauses? 
 	printf("After loop without data-sharing attribute clause a=%d\n",a);	
-}	
-
+}
