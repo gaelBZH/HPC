@@ -1,0 +1,3 @@
+The graph shows how execution time decreases as the number of threads increases.
+Running on a single thread takes 3.35 seconds, but this drops significantly to just 0.44 seconds when using 16 threads.
+The sharp drop from 1 to 2 threads shows excellent parallel efficiency. At higher thread counts, the performance gain begins to level off, due to minor synchronization overhead.
